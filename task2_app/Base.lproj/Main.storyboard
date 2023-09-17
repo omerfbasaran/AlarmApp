@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="task2_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0b-fu-Hrb">
+                                <rect key="frame" x="52" y="520" width="288" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Set Alarm" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="setAlertClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0cm-BZ-T7X"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Successfully Settled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmj-BB-siZ">
+                                <rect key="frame" x="101" y="429" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="v3K-ko-FwG">
+                                <rect key="frame" x="45" y="132" width="320" height="216"/>
+                                <locale key="locale" localeIdentifier="en_TR"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zmj-BB-siZ" firstAttribute="centerX" secondItem="h0b-fu-Hrb" secondAttribute="centerX" id="3fY-61-wO5"/>
+                            <constraint firstItem="zmj-BB-siZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="44G-RI-LXm"/>
+                            <constraint firstItem="h0b-fu-Hrb" firstAttribute="top" secondItem="zmj-BB-siZ" secondAttribute="bottom" constant="70" id="AMN-io-EoU"/>
+                            <constraint firstItem="v3K-ko-FwG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="FSE-wg-clr"/>
+                            <constraint firstItem="v3K-ko-FwG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="OFL-Kr-Tyt"/>
+                            <constraint firstItem="zmj-BB-siZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="PVf-bi-maP"/>
+                            <constraint firstItem="zmj-BB-siZ" firstAttribute="top" secondItem="v3K-ko-FwG" secondAttribute="bottom" constant="81" id="mdV-Vc-lP0"/>
+                            <constraint firstItem="h0b-fu-Hrb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="t6r-cZ-bXY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h0b-fu-Hrb" secondAttribute="bottom" constant="247" id="wH1-Ns-Mme"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="setAlarmButton" destination="h0b-fu-Hrb" id="o1w-bv-Cpx"/>
+                        <outlet property="succesLabel" destination="zmj-BB-siZ" id="uvV-b1-f1k"/>
+                        <outlet property="timePicker" destination="v3K-ko-FwG" id="vRY-ow-S3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
