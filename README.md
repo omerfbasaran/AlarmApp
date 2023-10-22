@@ -1,4 +1,4 @@
-# task2_app
+# AlarmApp
 A Simple Alarm App
 
 ## Introduction:
